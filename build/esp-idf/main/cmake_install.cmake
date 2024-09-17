@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/User/Desktop/esp_test/hello_world/main
+# Install script for directory: C:/Users/User/Desktop/github/hello_world/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

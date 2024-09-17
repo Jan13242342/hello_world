@@ -1,4 +1,4 @@
-/* * Data converted from C:/Users/User/Desktop/esp_test/hello_world/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/User/Desktop/github/hello_world/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

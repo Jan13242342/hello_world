@@ -519,16 +519,6 @@ rule C_STATIC_LIBRARY_LINKER____idf_soc_
 
 
 #############################################
-# Rule for compiling ASM files.
-
-rule ASM_COMPILER____idf_esp_hw_support_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building ASM object $out
-
-
-#############################################
 # Rule for compiling C files.
 
 rule C_COMPILER____idf_esp_hw_support_
@@ -769,25 +759,6 @@ rule C_STATIC_LIBRARY_LINKER____idf_nvs_flash_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER____idf_esp_driver_pcnt_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_pcnt_
-  command = cmd.exe /C "$PRE_LINK && C:\Espressif\tools\tools\cmake\3.24.0\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
 rule C_COMPILER____idf_esp_driver_spi_
   depfile = $DEP_FILE
   deps = gcc
@@ -799,25 +770,6 @@ rule C_COMPILER____idf_esp_driver_spi_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_spi_
-  command = cmd.exe /C "$PRE_LINK && C:\Espressif\tools\tools\cmake\3.24.0\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER____idf_esp_driver_mcpwm_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_mcpwm_
   command = cmd.exe /C "$PRE_LINK && C:\Espressif\tools\tools\cmake\3.24.0\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -875,25 +827,6 @@ rule C_COMPILER____idf_esp_driver_sdspi_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_sdspi_
-  command = cmd.exe /C "$PRE_LINK && C:\Espressif\tools\tools\cmake\3.24.0\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER____idf_esp_driver_sdio_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_sdio_
   command = cmd.exe /C "$PRE_LINK && C:\Espressif\tools\tools\cmake\3.24.0\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -989,25 +922,6 @@ rule C_COMPILER____idf_esp_driver_ledc_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_ledc_
-  command = cmd.exe /C "$PRE_LINK && C:\Espressif\tools\tools\cmake\3.24.0\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
-rule C_COMPILER____idf_esp_driver_parlio_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER____idf_esp_driver_parlio_
   command = cmd.exe /C "$PRE_LINK && C:\Espressif\tools\tools\cmake\3.24.0\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
@@ -1626,25 +1540,6 @@ rule C_STATIC_LIBRARY_LINKER____idf_fatfs_
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER____idf_ieee802154_
-  depfile = $DEP_FILE
-  deps = gcc
-  command = C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
-  description = Building C object $out
-
-
-#############################################
-# Rule for linking C static library.
-
-rule C_STATIC_LIBRARY_LINKER____idf_ieee802154_
-  command = cmd.exe /C "$PRE_LINK && C:\Espressif\tools\tools\cmake\3.24.0\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Espressif\tools\tools\riscv32-esp-elf\esp-13.2.0_20240530\riscv32-esp-elf\bin\riscv32-esp-elf-ranlib.exe $TARGET_FILE && $POST_BUILD"
-  description = Linking C static library $TARGET_FILE
-  restat = $RESTAT
-
-
-#############################################
-# Rule for compiling C files.
-
 rule C_COMPILER____idf_json_
   depfile = $DEP_FILE
   deps = gcc
@@ -1760,7 +1655,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_main_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Espressif\tools\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SC:\Users\User\Desktop\esp_test\hello_world -BC:\Users\User\Desktop\esp_test\hello_world\build
+  command = C:\Espressif\tools\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SC:\Users\User\Desktop\github\hello_world -BC:\Users\User\Desktop\github\hello_world\build
   description = Re-running CMake...
   generator = 1
 
